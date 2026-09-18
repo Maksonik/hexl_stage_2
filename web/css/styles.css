@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header__logo {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.partners {
+  border: 1px solid #111;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.partner-card {
+  border: 1px solid #111;
+  padding: 16px 20px;
+  background: #fff;
+}
+
+.partner-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.partner-card__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.partner-card__discount {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.partner-card__details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}

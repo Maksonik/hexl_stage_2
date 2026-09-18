@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="HEXL CRM">
+  <rect x="1" y="1" width="46" height="46" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M12 34 V14 H18 L30 28 V14 H36 V34 H30 L18 20 V34 Z" fill="#111"/>
+  <text x="60" y="32" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#111">HEXL CRM</text>
+</svg>
