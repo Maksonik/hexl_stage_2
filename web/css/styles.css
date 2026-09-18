@@ -34,6 +34,16 @@ body {
   font-weight: 700;
 }
 
+.status {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.status--error {
+  color: #111;
+  font-weight: 700;
+}
+
 .partners {
   border: 1px solid #111;
   padding: 16px;
