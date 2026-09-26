@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f0f0f0;
+    color: #222;
+}
+
+.skip-link {
+    position: absolute;
+    inset-block-start: 0.5rem;
+    inset-inline-start: 0.5rem;
+    z-index: 2;
+    padding: 0.75rem;
+    background: #fff;
+    transform: translateY(-160%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .logo {
+    width: auto;
+    height: 2.75rem;
+    object-fit: contain;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.375rem;
+    color: #111;
+}
+
+.content {
+    max-width: 48rem;
+    margin: 1.5rem auto;
+    padding-inline: 1rem;
+}
+
+.toolbar,
+.toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.toolbar {
+    justify-content: space-between;
+    margin-block-end: 1rem;
+}
+
+.toolbar-actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.status {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.button {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 0;
+    background: #333;
+    color: #fff;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #555;
+}
+
+.button:focus-visible,
+.card:focus-visible {
+    outline: 3px solid #1769aa;
+    outline-offset: 3px;
+}
+
+.button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.button-secondary {
+    background: #555;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card:hover {
+    background: #fff;
+    border-color: #999;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.card-role,
+.card-detail {
+    font-size: 0.875rem;
+    color: #555;
+    overflow-wrap: anywhere;
+}
+
+.card-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+    white-space: nowrap;
+}
+
+.card-volume {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.card-discount {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.empty-message {
+    padding: 2rem;
+    color: #777;
+    text-align: center;
+    background: #fafafa;
+}
+
+@media (max-width: 38rem) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 1.125rem;
+    }
+
+    .toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .toolbar-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-summary {
+        align-items: flex-start;
+    }
+}
