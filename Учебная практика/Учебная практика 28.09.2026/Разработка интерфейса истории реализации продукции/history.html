@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: История реализации продукции</title>
+    <link rel="icon" href="/ui/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/ui/style.css">
+    <link rel="stylesheet" href="/ui/history.css">
+    <link rel="stylesheet" href="/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/ui/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1 id="page-title">CRM: История реализации продукции</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <p><a class="button button-secondary" href="/">К списку партнёров</a></p>
+        <p id="status" class="status" role="status" aria-live="polite">Загрузка истории…</p>
+        <div class="table-wrap" id="table-wrap" hidden>
+            <table>
+                <caption>История продаж партнёра</caption>
+                <thead><tr><th scope="col">Наименование продукции</th><th scope="col">Количество (шт.)</th><th scope="col">Дата продажи</th></tr></thead>
+                <tbody id="sales-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/dialogs.js"></script>
+    <script src="/ui/history.js"></script>
+</body>
+</html>

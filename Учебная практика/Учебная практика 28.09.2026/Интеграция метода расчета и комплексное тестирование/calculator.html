@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Расчёт материалов</title>
+    <link rel="icon" href="/ui/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/ui/style.css">
+    <link rel="stylesheet" href="/form/partner.css">
+    <link rel="stylesheet" href="/calculator.css">
+    <link rel="stylesheet" href="/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/ui/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1>CRM: Расчёт материалов</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <p><a class="button button-secondary" href="/">К списку партнёров</a></p>
+        <form id="calculator-form" class="partner-form" novalidate>
+            <fieldset>
+                <legend>Расход материала для заказа</legend>
+                <p class="calculator-description" id="calculator-description">Укажите длину и ширину одного изделия в одинаковых условных единицах. Расчёт учитывает количество изделий, коэффициент типа продукции и процент брака материала.</p>
+                <div class="form-grid">
+                    <div class="field"><label for="product_type_id">Тип продукции</label><select id="product_type_id" name="product_type_id" required></select></div>
+                    <div class="field"><label for="material_type_id">Тип материала</label><select id="material_type_id" name="material_type_id" required></select></div>
+                    <div class="field"><label for="param_1">Длина изделия</label><input id="param_1" name="param_1" type="number" min="0" step="any" aria-describedby="calculator-description" required></div>
+                    <div class="field"><label for="param_2">Ширина изделия</label><input id="param_2" name="param_2" type="number" min="0" step="any" aria-describedby="calculator-description" required></div>
+                    <div class="field"><label for="quantity">Количество изделий</label><input id="quantity" name="quantity" type="number" min="1" step="1" required></div>
+                </div>
+            </fieldset>
+            <div class="form-actions"><button id="calculate-btn" class="button" type="submit" disabled>Рассчитать</button></div>
+        </form>
+        <p id="status" class="status" role="status" aria-live="polite">Загрузка справочников…</p>
+        <p id="result" class="result" role="status" aria-live="polite"></p>
+    </main>
+    <script src="/dialogs.js"></script>
+    <script src="/calculator.js"></script>
+</body>
+</html>

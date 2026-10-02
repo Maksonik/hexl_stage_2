@@ -1,0 +1,4 @@
+partner_id,company_name,inn,contact_email,phone,rating,partner_type,address,director_name
+1,"ООО ""Логистик-Экспресс""",7701234567,info@logex.ru,+7 (999) 111-22-33,5,ООО,,
+2,"ИП Петров А.В.",5001098765,petrov_delivery@mail.ru,,4,ИП,,
+3,"ТК ""Быстрый Путь""",7812345678,speedway@yandex.ru,+78125554433,0,ТК,,

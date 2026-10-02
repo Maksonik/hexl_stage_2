@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Карточка партнёра</title>
+    <link rel="icon" href="/ui/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/ui/style.css">
+    <link rel="stylesheet" href="/form/partner.css">
+    <link rel="stylesheet" href="/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/ui/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1 id="page-title">CRM: Карточка партнёра</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <form id="partner-form" class="partner-form" novalidate>
+            <fieldset>
+                <legend>Данные партнёра</legend>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="company_name">Наименование <span aria-hidden="true">*</span></label>
+                        <input id="company_name" name="company_name" type="text" maxlength="255" autocomplete="organization" required>
+                    </div>
+                    <div class="field">
+                        <label for="partner_type">Тип партнёра <span aria-hidden="true">*</span></label>
+                        <select id="partner_type" name="partner_type" required>
+                            <option value="">Выберите тип</option>
+                            <option>ООО</option>
+                            <option>ЗАО</option>
+                            <option>ИП</option>
+                            <option>ТК</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="inn">ИНН <span aria-hidden="true">*</span></label>
+                        <input id="inn" name="inn" type="text" inputmode="numeric" autocomplete="off" pattern="([0-9]{10}|[0-9]{12})" maxlength="12" aria-describedby="inn-hint" required>
+                        <small id="inn-hint">10 или 12 цифр.</small>
+                    </div>
+                    <div class="field">
+                        <label for="contact_email">Email <span aria-hidden="true">*</span></label>
+                        <input id="contact_email" name="contact_email" type="email" maxlength="255" autocomplete="email" placeholder="name@example.ru" required>
+                    </div>
+                    <div class="field">
+                        <label for="rating">Рейтинг <span aria-hidden="true">*</span></label>
+                        <input id="rating" name="rating" type="text" inputmode="numeric" pattern="[0-9]+" aria-describedby="rating-hint" required>
+                        <small id="rating-hint">Введите целое неотрицательное число.</small>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" name="phone" type="tel" maxlength="50" autocomplete="tel" placeholder="+7 (999) 123-45-67" aria-describedby="phone-hint">
+                        <small id="phone-hint">Например: +7 (999) 123-45-67.</small>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="address">Адрес</label>
+                        <textarea id="address" name="address" rows="3" maxlength="1000" autocomplete="street-address"></textarea>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="director_name">ФИО директора</label>
+                        <input id="director_name" name="director_name" type="text" maxlength="255" autocomplete="name">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <a id="cancel-link" class="button button-secondary" href="/">Назад</a>
+                <button id="save-btn" class="button" type="submit">Сохранить</button>
+            </div>
+        </form>
+    </main>
+    <script src="/dialogs.js"></script>
+    <script src="/form/partner.js"></script>
+</body>
+</html>
