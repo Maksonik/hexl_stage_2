@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Карточка партнёра</title>
+    <link rel="icon" href="/static/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/partner_edit_window.css">
+    <link rel="stylesheet" href="/static/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/static/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1 id="page-title">CRM: Карточка партнёра</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <form id="partner-form" class="partner-form" novalidate>
+            <fieldset>
+                <legend>Данные партнёра</legend>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="partner_name">Наименование <span aria-hidden="true">*</span></label>
+                        <input id="partner_name" name="partner_name" type="text" maxlength="255" autocomplete="organization" placeholder="ООО «Ромашка»" required>
+                    </div>
+                    <div class="field">
+                        <label for="partner_type">Тип партнёра <span aria-hidden="true">*</span></label>
+                        <select id="partner_type" name="partner_type" required>
+                            <option value="">Выберите тип</option>
+                            <option>ООО</option>
+                            <option>АО</option>
+                            <option>ЗАО</option>
+                            <option>ИП</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="rating">Рейтинг <span aria-hidden="true">*</span></label>
+                        <input id="rating" name="rating" type="text" inputmode="numeric" pattern="[0-9]+" placeholder="0" aria-describedby="rating-hint" required>
+                        <small id="rating-hint">Целое неотрицательное число.</small>
+                    </div>
+                    <div class="field">
+                        <label for="inn">ИНН <span aria-hidden="true">*</span></label>
+                        <input id="inn" name="inn" type="text" inputmode="numeric" autocomplete="off" pattern="([0-9]{10}|[0-9]{12})" maxlength="12" placeholder="7701234567" aria-describedby="inn-hint" required>
+                        <small id="inn-hint">10 или 12 цифр.</small>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="address">Адрес</label>
+                        <textarea id="address" name="address" rows="3" maxlength="1000" autocomplete="street-address" placeholder="123456, г. Москва, ул. Примерная, д. 1"></textarea>
+                    </div>
+                    <div class="field field-wide">
+                        <label for="director_name">Директор</label>
+                        <input id="director_name" name="director_name" type="text" maxlength="255" autocomplete="name" placeholder="Иванов Иван Иванович">
+                    </div>
+                    <div class="field">
+                        <label for="phone">Телефон</label>
+                        <input id="phone" name="phone" type="tel" maxlength="50" autocomplete="tel" placeholder="+7 (999) 123-45-67" aria-describedby="phone-hint">
+                        <small id="phone-hint">Формат: +7 (999) 123-45-67.</small>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email <span aria-hidden="true">*</span></label>
+                        <input id="email" name="email" type="email" maxlength="255" autocomplete="email" placeholder="name@example.ru" required>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <a id="back-link" class="button button-secondary" href="/">Назад</a>
+                <a id="history-link" class="button button-secondary" href="/" hidden>История продаж</a>
+                <button id="save-btn" class="button" type="submit">Сохранить</button>
+            </div>
+        </form>
+    </main>
+    <script src="/static/dialogs.js"></script>
+    <script src="/static/api.js"></script>
+    <script src="/static/partner_edit_window.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: Реестр партнёров</title>
+    <link rel="icon" href="/static/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/static/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1>CRM: Реестр партнёров</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <div class="toolbar">
+            <p id="status" class="status" role="status" aria-live="polite">Загрузка данных…</p>
+            <div class="toolbar-actions">
+                <button id="refresh-btn" class="button button-secondary" type="button">Обновить</button>
+                <a class="button" href="/partner/new">Добавить партнёра</a>
+            </div>
+        </div>
+        <ul id="cards" class="cards" aria-label="Партнёры"></ul>
+    </main>
+    <script src="/static/dialogs.js"></script>
+    <script src="/static/api.js"></script>
+    <script src="/static/main_window.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM: История продаж</title>
+    <link rel="icon" href="/static/resources/icon.png" type="image/png">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/partner_history_window.css">
+    <link rel="stylesheet" href="/static/dialogs.css">
+</head>
+<body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+    <header class="header">
+        <img class="logo" src="/static/resources/logo.png" alt="Логотип компании" width="150" height="44">
+        <h1 id="page-title">CRM: История продаж</h1>
+    </header>
+    <main class="content" id="content" tabindex="-1">
+        <div class="history-actions">
+            <a id="back-link" class="button button-secondary" href="/">Назад</a>
+            <a id="edit-link" class="button button-secondary" href="/">Редактировать партнёра</a>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">Загрузка истории…</p>
+        <div class="table-wrap" id="table-wrap" hidden>
+            <table>
+                <caption>История продаж партнёра</caption>
+                <thead><tr><th scope="col">Товар</th><th scope="col">Дата продажи</th><th scope="col">Количество, шт.</th></tr></thead>
+                <tbody id="sales-body"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/static/dialogs.js"></script>
+    <script src="/static/api.js"></script>
+    <script src="/static/partner_history_window.js"></script>
+</body>
+</html>
